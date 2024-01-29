@@ -208,7 +208,7 @@ li{
     }
   
     .grid-cont {
-      width: 66%; /* Make each item take the full width */
+      margin: 0 auto; /* Center the items */
       padding: 20px;
     }
 
