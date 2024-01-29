@@ -43,12 +43,35 @@ p {
     padding-right: 10%;
     padding-top: 1px;
 }
+/* ///////////////Navbar styling ///////////////*/
+.navbar {
+    background-color: white; /* Changed to white */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #54078A; /* Added purple border at the bottom */
+    padding: 1px 0; /* Reduced padding to make navbar thinner */
+}
+
+.logo {
+    cursor: pointer;
+    padding-right: 10%;
+    padding-top: 1px;
+}
 
 .nav__links__left {
     list-style: none;
+    display: flex;
+    left: 0;
+    bottom: -2px; /* Align with bottom of the nav bar */
 }
 
 .nav__links__left li {
+    margin: 0 15px;
+    position: relative; /* Needed for underline effect */
     display: inline-block;
     padding: 5px 15px;
 }
@@ -58,30 +81,89 @@ p {
     /* background-color: beige; */
 }
 
+/* Underline effect for the active page */
+.nav-links .active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #54078A;
+    left: 0;
+    bottom: -2px; /* Align with bottom of the nav bar */
+}
+
 .nav__links__left li a:hover {
     color: #14245c;
     background-color: #E6E6FA;
 
 }
 
- .selected {
-    border-bottom: 2px solid #14245c;
- }
+/* Burger menu styling */
+.burger {
+    display: none;
+    border: none;
+    margin-right: 10px;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer; /* Change cursor to pointer */
+}
 
- .social-media {
-    display: inline-block;
-    padding: 2px 3px;
- }
+/* Burger line styling */
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #54078A; /* Changed to purple */
+    transition: box-shadow 0.3s; /* Smooth transition for shadow effect */
+}
 
- .follow-us {
-    font-family: "Open Sans", "sans-serif"; 
-    font-weight: 400;
-    font-size: 14px;
-    color: #14245c;
-    text-decoration: none;
-    padding-left: 5%;
-    padding-right: 5px;
- }
+/* Hover effect for burger menu */
+.burger:hover span, .burger-active span {
+    box-shadow: 0 0 3px #54078A; /* Shadow effect on hover and when active */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .logo {
+        height: auto;
+    }
+    .burger {
+        display: flex;
+    }
+
+    .nav__links__left {
+        all: unset; /* Remove all styling */
+    }
+
+    .nav__links__left {
+        display: none; /* Initially hidden */
+        z-index: 10;
+        position: absolute;
+        right: 0;
+        top: 54px; /* Position below the navbar */
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px; /* Padding around links */
+        width: auto; /* Adjust width to content */
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.2); /* Shadow on bottom and left */
+        border-left: 1px solid purple; /* Thin purple border on the left */
+        border-bottom: 1px solid purple; /* Thin purple border on the bottom */
+        /* Rest of your styles */
+    }
+
+    .nav__links__left li {
+        margin: 15px;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
+/* ///////////////Banner styling ///////////////*/
+
 
 #container {
     min-height: 100%;

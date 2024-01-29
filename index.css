@@ -18,7 +18,7 @@ li, a {
     text-decoration: none;
 }
 
-
+/* ///////////////Navbar styling ///////////////*/
 .navbar {
     background-color: white; /* Changed to white */
     display: flex;
@@ -99,6 +99,9 @@ li, a {
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
+    .logo {
+        height: auto;
+    }
     .burger {
         display: flex;
     }
@@ -133,6 +136,8 @@ li, a {
         display: flex;
     }
 }
+
+/* ///////////////Banner styling ///////////////*/
 
 h3{
     justify-content: center;
