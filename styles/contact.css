@@ -214,10 +214,11 @@ li, a {
 
 
 
-
-
-
-
-
-
-
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; 
+        grid-gap: 10%; 
+        padding: 7%; 
+        transform: scale(0.85);
+    }
+}
