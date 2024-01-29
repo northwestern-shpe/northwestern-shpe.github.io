@@ -208,7 +208,12 @@ li{
     }
   
     .grid-cont {
-      width: 100%; /* Make each item take the full width */
+      width: 66%; /* Make each item take the full width */
       padding: 20px;
+    }
+
+    .pic {
+        width: 100%;
+        height: auto;
     }
   }
