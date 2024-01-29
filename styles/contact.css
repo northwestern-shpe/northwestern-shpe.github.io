@@ -221,4 +221,19 @@ li, a {
         padding: 7%; 
         transform: scale(0.85);
     }
+
+    .container {
+        padding-bottom: 50px; /* Or an appropriate value that creates sufficient space */
+    }
+
+    .bott {
+        position: relative; /* This ensures .bott-art is positioned relative to .bott */
+        height: 30px; /* Adjust as per the height of your footer image */
+    }
+    
+    .bott-art {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
